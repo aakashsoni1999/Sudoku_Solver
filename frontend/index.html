@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>SUDOKU</title>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">SUDOKU</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Solver</a>
+                    <a class="nav-item nav-link" href="#">Creator</a>
+                    <a class="nav-item nav-link disabled" href="#">Login</a>
+                  </div>
+                </div>
+        </nav>
+        <div class="container" style="background-color: aliceblue; height:100vh ; width: 100vw; border: solid black 2px;">
+            <div class="container" style="background-color: aquamarine; height:87vh ; width: 77vw; position: absolute; margin-top: 6vh; margin-left: 2vw; border: solid black 2px;" >
+                <div class="container" style="background-color: white; height:50vh ; width: 24vw; position: absolute; margin-top: 15vh; margin-left: 25vw; ">
+                    <table  id="outer">
+                        <tr>
+                            <td class="outer_data">
+                                    <table class="inner">
+                                            <tr>
+                                                <td class="small">
+                                                    <input type="text"  maxlength="1" class="data" id="mat00">
+                                                </td>
+                                                <td class="small">
+                                                        <input type="text" maxlength="1" class="data" id="mat01">
+                                                </td>
+                                                <td class="small">
+                                                        <input type="text" maxlength="1" class="data" id="mat02">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                    <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat10">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat11">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat12">
+                                                        </td>
+                                            </tr>
+                                            <tr>
+                                                    <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat20">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat21">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat22">
+                                                        </td>
+                                            </tr>
+                                        </table>
+                            </td>
+                            <td class="outer_data">
+                                    <table class="inner">
+                                            <tr>
+                                                    <td class="small">
+                                                        <input type="text" maxlength="1" class="data" id="mat03">
+                                                    </td>
+                                                    <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat04">
+                                                    </td>
+                                                    <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat05">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat13">
+                                                            </td>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat14">
+                                                            </td>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat15">
+                                                            </td>
+                                                </tr>
+                                                <tr>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat23">
+                                                            </td>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat24">
+                                                            </td>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat25">
+                                                            </td>
+                                                </tr>
+                                        </table>
+                            </td>
+                            <td class="outer_data">
+                                    <table class="inner">
+                                            <tr>
+                                                    <td class="small">
+                                                        <input type="text" maxlength="1" class="data" id="mat06">
+                                                    </td>
+                                                    <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat07">
+                                                    </td>
+                                                    <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat08">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat16">
+                                                            </td>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat17">
+                                                            </td>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat18">
+                                                            </td>
+                                                </tr>
+                                                <tr>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat26">
+                                                            </td>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat27">
+                                                            </td>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat28">
+                                                            </td>
+                                                </tr>
+                                        </table>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td class="outer_data">
+                                        <table class="inner">
+                                                <tr>
+                                                        <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat30">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat31">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat32">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat40">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat41">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat42">
+                                                                </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat50">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat51">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat52">
+                                                                </td>
+                                                    </tr>
+                                            </table>
+                                </td>
+                                <td class="outer_data">
+                                        <table class="inner">
+                                                <tr>
+                                                        <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat33">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat34">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat35">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat43">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat44">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat45">
+                                                                </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat53">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat54">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat55">
+                                                                </td>
+                                                    </tr>
+                                            </table>
+                                </td>
+                                <td class="outer_data">
+                                        <table class="inner">
+                                                <tr>
+                                                        <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat36">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat37">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat38">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat46">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat47">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat48">
+                                                                </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat56">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat57">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat58">
+                                                                </td>
+                                                    </tr>
+                                            </table>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td class="outer_data">
+                                        <table class="inner">
+                                                <tr>
+                                                        <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat60">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat61">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat62">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat70">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat71">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat72">
+                                                                </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat80">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat81">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat82">
+                                                                </td>
+                                                    </tr>
+                                            </table>
+                                </td>
+                                <td class="outer_data">
+                                        <table class="inner">
+                                                <tr>
+                                                        <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat63">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat64">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat65">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat73">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat74">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat75">
+                                                                </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat83">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat84">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat85">
+                                                                </td>
+                                                    </tr>
+                                            </table>
+                                </td>
+                                <td class="outer_data">
+                                        <table class="inner">
+                                                <tr>
+                                                        <td class="small">
+                                                            <input type="text" maxlength="1" class="data" id="mat66">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat67">
+                                                        </td>
+                                                        <td class="small">
+                                                                <input type="text" maxlength="1" class="data" id="mat68">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat76">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat77">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat78">
+                                                                </td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="small">
+                                                                    <input type="text" maxlength="1" class="data" id="mat86">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat87">
+                                                                </td>
+                                                                <td class="small">
+                                                                        <input type="text" maxlength="1" class="data" id="mat88">
+                                                                </td>
+                                                    </tr>
+                                            </table>
+                                </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="container" id="warning" style="position:absolute; left:5vw; top:5px; display:none">
+                        <h3>
+                                Wrong Input!
+                                Please enter a valid sudoku,this sudoku cannot be solved
+                        </h3>
+                        <button type="button" class="btn btn-warning" style="width: 8vw; position:relative; left:28vw;" onclick="hide()">Ok</button>
+                </div>
+                <div class="container" style="position:absolute; left:30vw; top:70vh;">
+                    <button type="button" class="btn btn-danger" style="width: 8vw; position:relative; left:-3vw;" onclick="Clear()">Clear</button>
+                    <button type="button" class="btn btn-primary" style="width: 8vw; position:relative; " onclick="Solve()">Solve</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+#outer{
+    height: 50vh; 
+  width:24vw; 
+  margin-left: -1.1vw; 
+  border-collapse: collapse;
+}
+.outer_data{
+  border: 2px solid black;
+}
+.inner{
+    height: 16vh;
+    width: 7.7vw;
+    border-collapse: collapse;
+}
+.small{
+    border:1px solid black;
+}
+.data{
+    height: 4.5vh;
+    width: 2.2vw;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+}
