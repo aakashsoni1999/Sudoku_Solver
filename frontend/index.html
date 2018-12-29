@@ -27,13 +27,23 @@
                   </div>
                 </div>
         </nav>
-        <div class="container" style="background-color: aliceblue; height:100vh ; width: 100vw; border: solid black 2px;">
-            <div class="container" style="background-color: aquamarine; height:87vh ; width: 77vw; position: absolute; margin-top: 6vh; margin-left: 2vw; border: solid black 2px;" >
-                <div class="container" style="background-color: white; height:50vh ; width: 24vw; position: absolute; margin-top: 15vh; margin-left: 25vw; ">
-                    <table  id="outer">
+        <div class="outer1" style="background-color: aliceblue; height:150vh; width:100vw; border:solid black 2px;">
+            <div class="outer2" style="background-color: aquamarine; height:130vh; width:90vw; border: solid black 2px;" >
+                <div id="warning" style="display:none">
+                        <h3>
+                                Wrong Input!
+                                Please enter a valid sudoku,this sudoku cannot be solved
+                        </h3>
+                        <div class="warn_button">
+                                <button type="button" class="btn btn-warning" style="width: 8vw;" onclick="hide()">Ok</button>
+                        </div>
+                </div>
+                <br>
+                <div class="outer3"  style="background-color:aquamarine; width:50vw; ">
+                    <table  id="outer" class="table">
                         <tr>
                             <td class="outer_data">
-                                    <table class="inner">
+                                    <table class="inner" class="table">
                                             <tr>
                                                 <td class="small">
                                                     <input type="text"  maxlength="1" class="data" id="mat00">
@@ -70,7 +80,7 @@
                                         </table>
                             </td>
                             <td class="outer_data">
-                                    <table class="inner">
+                                    <table class="inner" class="table">
                                             <tr>
                                                     <td class="small">
                                                         <input type="text" maxlength="1" class="data" id="mat03">
@@ -107,7 +117,7 @@
                                         </table>
                             </td>
                             <td class="outer_data">
-                                    <table class="inner">
+                                    <table class="inner" class="table">
                                             <tr>
                                                     <td class="small">
                                                         <input type="text" maxlength="1" class="data" id="mat06">
@@ -146,7 +156,7 @@
                         </tr>
                         <tr>
                                 <td class="outer_data">
-                                        <table class="inner">
+                                        <table class="inner" class="table">
                                                 <tr>
                                                         <td class="small">
                                                             <input type="text" maxlength="1" class="data" id="mat30">
@@ -183,7 +193,7 @@
                                             </table>
                                 </td>
                                 <td class="outer_data">
-                                        <table class="inner">
+                                        <table class="inner" class="table">
                                                 <tr>
                                                         <td class="small">
                                                             <input type="text" maxlength="1" class="data" id="mat33">
@@ -220,7 +230,7 @@
                                             </table>
                                 </td>
                                 <td class="outer_data">
-                                        <table class="inner">
+                                        <table class="inner" class="table">
                                                 <tr>
                                                         <td class="small">
                                                             <input type="text" maxlength="1" class="data" id="mat36">
@@ -259,7 +269,7 @@
                         </tr>
                         <tr>
                                 <td class="outer_data">
-                                        <table class="inner">
+                                        <table class="inner" class="table">
                                                 <tr>
                                                         <td class="small">
                                                             <input type="text" maxlength="1" class="data" id="mat60">
@@ -296,7 +306,7 @@
                                             </table>
                                 </td>
                                 <td class="outer_data">
-                                        <table class="inner">
+                                        <table class="inner" class="table">
                                                 <tr>
                                                         <td class="small">
                                                             <input type="text" maxlength="1" class="data" id="mat63">
@@ -333,7 +343,7 @@
                                             </table>
                                 </td>
                                 <td class="outer_data">
-                                        <table class="inner">
+                                        <table class="inner" class="table">
                                                 <tr>
                                                         <td class="small">
                                                             <input type="text" maxlength="1" class="data" id="mat66">
@@ -371,17 +381,8 @@
                                 </td>
                         </tr>
                     </table>
-                </div>
-                <div class="container" id="warning" style="position:absolute; left:5vw; top:5px; display:none">
-                        <h3>
-                                Wrong Input!
-                                Please enter a valid sudoku,this sudoku cannot be solved
-                        </h3>
-                        <button type="button" class="btn btn-warning" style="width: 8vw; position:relative; left:28vw;" onclick="hide()">Ok</button>
-                </div>
-                <div class="container" style="position:absolute; left:30vw; top:70vh;">
-                    <button type="button" class="btn btn-danger" style="width: 8vw; position:relative; left:-3vw;" onclick="Clear()">Clear</button>
-                    <button type="button" class="btn btn-primary" style="width: 8vw; position:relative; " onclick="Solve()">Solve</button>
+                        <button type="button" class="btn btn-danger" style="width: 8vw; " onclick="Clear()">Clear</button>
+                        <button type="button" class="btn btn-primary" style="width: 8vw;" onclick="Solve()">Solve</button>
                 </div>
             </div>
         </div>
